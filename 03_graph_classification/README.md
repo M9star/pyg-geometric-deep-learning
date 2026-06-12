@@ -2,8 +2,8 @@
 
 > **Goal:** classify *entire graphs*. Each graph is a molecule; predict whether it's mutagenic.
 
-🎬 **Watch first:** [Batching graphs in PyG](https://youtu.be/REPLACE_ME_4) ·
-[Why sum beats mean — GIN & the WL test](https://youtu.be/REPLACE_ME_5)
+🎬 **Watch first:** [Batching graphs in PyG](https://youtu.be/bD7IDjEJ16M) ·
+[Why sum beats mean — GIN & the WL test](https://youtu.be/sJ-m8AIJC-s)
 
 This is a different task from module 02. There, we labeled **nodes** inside one big graph. Here we have **many small
 graphs** and one label **per graph**. That changes two things: **batching** and **readout**.

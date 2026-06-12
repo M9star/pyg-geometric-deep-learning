@@ -61,8 +61,8 @@ def build_01():
         md(r"""# 01 · Fundamentals — Graphs & Message Passing
 
 > **Run me top to bottom.** Each cell builds on the last.
-> 🎬 **Watch first:** [Message Passing — how every GNN works](https://youtu.be/REPLACE_ME_1) ·
-> bonus: [Over-smoothing — why deep GNNs fail](https://youtu.be/REPLACE_ME_6)
+> 🎬 **Watch first:** [Message Passing — how every GNN works](https://youtu.be/eZ8AdilDccQ) ·
+> bonus: [Over-smoothing — why deep GNNs fail](https://youtu.be/Xd7QVCdCr5I)
 > *(animation source: `animations/message_passing.py`)*
 
 ## What is a graph, in code?
@@ -159,8 +159,8 @@ def build_02():
     cells = [
         md(r"""# 02 · Node Classification — GCN on Cora
 
-> 🎬 **Watch first:** [The GCN formula, term by term](https://youtu.be/REPLACE_ME_2) ·
-> [GAT — which neighbors matter](https://youtu.be/REPLACE_ME_3)
+> 🎬 **Watch first:** [The GCN formula, term by term](https://youtu.be/eqmp7V0I0cw) ·
+> [GAT — which neighbors matter](https://youtu.be/0EdsNkNlaZo)
 
 **Task:** given a citation graph where only ~140 of 2,708 papers are labelled, predict every paper's topic.
 This is **transductive** learning — the whole graph (features + edges) is visible; only test *labels* are hidden.
@@ -252,8 +252,8 @@ def build_03():
     cells = [
         md(r"""# 03 · Graph Classification — GIN on MUTAG
 
-> 🎬 **Watch first:** [Batching graphs in PyG](https://youtu.be/REPLACE_ME_4) ·
-> [Why sum beats mean — GIN & the WL test](https://youtu.be/REPLACE_ME_5)
+> 🎬 **Watch first:** [Batching graphs in PyG](https://youtu.be/bD7IDjEJ16M) ·
+> [Why sum beats mean — GIN & the WL test](https://youtu.be/sJ-m8AIJC-s)
 
 **Task:** classify *whole graphs*. Each graph is a molecule; predict whether it's mutagenic. Two new ideas vs.
 node classification:

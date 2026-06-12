@@ -42,15 +42,14 @@ Work through the modules **in order**. Each builds on the previous one.
 
 | # | Video | Concept | Pairs with |
 |---|-------|---------|------------|
-| 1 | [Message Passing — how every GNN works](https://youtu.be/REPLACE_ME_1) | Message → Aggregate → Update | Module 01 |
-| 2 | [The GCN formula, term by term](https://youtu.be/REPLACE_ME_2) | Symmetric normalization, weight sharing | Module 02 |
-| 3 | [GAT — which neighbors matter](https://youtu.be/REPLACE_ME_3) | Learned attention per edge | Module 02 |
-| 4 | [Batching graphs in PyG](https://youtu.be/REPLACE_ME_4) | The disconnected-graph trick + pooling | Module 03 |
-| 5 | [Why sum beats mean (GIN & WL)](https://youtu.be/REPLACE_ME_5) | Expressiveness, Weisfeiler–Lehman | Module 03 |
-| 6 | [Over-smoothing — why deep GNNs fail](https://youtu.be/REPLACE_ME_6) | Why GNNs stay 2–4 layers | All modules |
+| 1 | [Message Passing — how every GNN works](https://youtu.be/eZ8AdilDccQ) | Message → Aggregate → Update | Module 01 |
+| 2 | [The GCN formula, term by term](https://youtu.be/eqmp7V0I0cw) | Symmetric normalization, weight sharing | Module 02 |
+| 3 | [GAT — which neighbors matter](https://youtu.be/0EdsNkNlaZo) | Learned attention per edge | Module 02 |
+| 4 | [Batching graphs in PyG](https://youtu.be/bD7IDjEJ16M) | The disconnected-graph trick + pooling | Module 03 |
+| 5 | [Why sum beats mean (GIN & WL)](https://youtu.be/sJ-m8AIJC-s) | Expressiveness, Weisfeiler–Lehman | Module 03 |
+| 6 | [Over-smoothing — why deep GNNs fail](https://youtu.be/Xd7QVCdCr5I) | Why GNNs stay 2–4 layers | All modules |
 
-*(Links are placeholders until upload — regenerate the videos locally anytime with
-`uv run python animations/render_all.py --quality h`.)*
+*(Prefer local files? Regenerate the videos anytime with `uv run python animations/render_all.py --quality h`.)*
 
 ---
 

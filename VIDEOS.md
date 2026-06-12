@@ -13,7 +13,7 @@ Suggested upload order = the numbering below (each builds on the previous one).
 
 ## 1. Message Passing — the one idea behind every GNN
 **File:** `assets/sample_message_passing.mp4` · ~53s · pairs with module 01
-**▶ Watch on YouTube:** https://youtu.be/REPLACE_ME_1 *(placeholder — updated after upload)*
+**▶ Watch on YouTube:** https://youtu.be/eZ8AdilDccQ
 
 **What it shows:** a center node `v` with three neighbors. The three-step loop plays out visually:
 **(1) MESSAGE** — neighbors light up as they prepare messages; **(2) AGGREGATE** — orange pulses flow along the
@@ -32,7 +32,7 @@ representation. Ends with the general MPNN formula `h_v' = UPDATE(h_v, Σ MSG(h_
 
 ## 2. The GCN Layer, Term by Term
 **File:** `assets/sample_gcn_explained.mp4` · ~53s · pairs with module 02
-**▶ Watch on YouTube:** https://youtu.be/REPLACE_ME_2 *(placeholder — updated after upload)*
+**▶ Watch on YouTube:** https://youtu.be/eqmp7V0I0cw
 
 **What it shows:** the full GCN update formula on screen; each term is highlighted in its own color while the
 narration explains it — the neighbor features `h_u` (green), the sum over `N(v) ∪ {v}` with the self-loop (yellow),
@@ -51,7 +51,7 @@ linear map.*
 
 ## 3. GAT — Attention on Graphs
 **File:** `assets/sample_gat_attention.mp4` · ~85s · pairs with module 02
-**▶ Watch on YouTube:** https://youtu.be/REPLACE_ME_3 *(placeholder — updated after upload)*
+**▶ Watch on YouTube:** https://youtu.be/0EdsNkNlaZo
 
 **What it shows:** the same node-with-three-neighbors setup, but now the **edges visibly thicken and thin** to their
 learned attention scores — α = 0.65 (listen closely, thick orange), 0.25 (medium, yellow), 0.10 (mostly ignored,
@@ -71,7 +71,7 @@ Opens by contrasting with GCN's fixed degree-based weights.
 
 ## 4. Batching Graphs — the Disconnected-Graph Trick
 **File:** `assets/sample_graph_batching.mp4` · ~69s · pairs with module 03
-**▶ Watch on YouTube:** https://youtu.be/REPLACE_ME_4 *(placeholder — updated after upload)*
+**▶ Watch on YouTube:** https://youtu.be/bD7IDjEJ16M
 
 **What it shows:** three differently-sized graphs (blue triangle, green pair, orange square) **slide together into
 one big disconnected graph** inside a "Batch" box — PyG's actual batching mechanism. The color-coded batch vector
@@ -90,7 +90,7 @@ vectors out.
 
 ## 5. Why GIN Uses SUM — the Weisfeiler–Lehman Connection
 **File:** `assets/sample_gin_wl_test.mp4` · ~82s · pairs with module 03
-**▶ Watch on YouTube:** https://youtu.be/REPLACE_ME_5 *(placeholder — updated after upload)*
+**▶ Watch on YouTube:** https://youtu.be/sJ-m8AIJC-s
 
 **What it shows:** two star graphs — node `v` with **2** neighbors and node `w` with **3**, every neighbor feature
 equal to 1. With **mean** aggregation both give exactly 1 → *"identical → MEAN cannot tell them apart!"* (red).
@@ -109,7 +109,7 @@ Weisfeiler–Lehman isomorphism test, and the GIN layer `h_v' = MLP((1+ε)h_v + 
 
 ## 6. Over-smoothing — Why Deep GNNs Fail
 **File:** `assets/sample_over_smoothing.mp4` · ~62s · applies to every module
-**▶ Watch on YouTube:** https://youtu.be/REPLACE_ME_6 *(placeholder — updated after upload)*
+**▶ Watch on YouTube:** https://youtu.be/Xd7QVCdCr5I
 
 **What it shows:** six nodes on a hexagon, each with its own vivid color (= its embedding). Each message-passing
 layer blends every node with its neighbors: layer 1 is the sweet spot (distinct but structure-aware), layer 2–3
