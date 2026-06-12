@@ -19,6 +19,7 @@ HERE = Path(__file__).parent
 SCENES = [
     ("message_passing.py", "MessagePassing"),
     ("gcn_explained.py", "GCNExplained"),
+    ("gat_attention.py", "GATAttention"),
 ]
 
 

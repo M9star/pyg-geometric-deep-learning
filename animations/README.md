@@ -16,6 +16,7 @@ animation stay in sync.
 |------|-------------|----------|
 | `message_passing.py` | `MessagePassing` | The Message → Aggregate → Update loop (the core of every GNN) |
 | `gcn_explained.py` | `GCNExplained` | The GCN formula, term by term, incl. symmetric normalization |
+| `gat_attention.py` | `GATAttention` | GAT: learned attention weights per edge (vs. GCN's fixed degree weights), softmax, multi-head |
 
 ## Render
 
