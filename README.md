@@ -35,8 +35,22 @@ Work through the modules **in order**. Each builds on the previous one.
 **Two ways to learn each topic:**
 - 📓 **[`notebooks/`](./notebooks)** — run it stepwise in Jupyter, with rendered math, notes, and inline references.
 - 🎬 **[`animations/`](./animations)** — narrated Manim videos of the trickiest ideas (start with *message passing*).
-  See **[`VIDEOS.md`](./VIDEOS.md)** for what each video covers (also YouTube-ready titles/descriptions).
+  See **[`VIDEOS.md`](./VIDEOS.md)** for what each video covers.
 - 📚 **[`REFERENCES.md`](./REFERENCES.md)** — exact paper for every method (GCN, GAT, GraphSAGE, GIN, GAE …).
+
+### 🎥 Watch the video series
+
+| # | Video | Concept | Pairs with |
+|---|-------|---------|------------|
+| 1 | [Message Passing — how every GNN works](https://youtu.be/REPLACE_ME_1) | Message → Aggregate → Update | Module 01 |
+| 2 | [The GCN formula, term by term](https://youtu.be/REPLACE_ME_2) | Symmetric normalization, weight sharing | Module 02 |
+| 3 | [GAT — which neighbors matter](https://youtu.be/REPLACE_ME_3) | Learned attention per edge | Module 02 |
+| 4 | [Batching graphs in PyG](https://youtu.be/REPLACE_ME_4) | The disconnected-graph trick + pooling | Module 03 |
+| 5 | [Why sum beats mean (GIN & WL)](https://youtu.be/REPLACE_ME_5) | Expressiveness, Weisfeiler–Lehman | Module 03 |
+| 6 | [Over-smoothing — why deep GNNs fail](https://youtu.be/REPLACE_ME_6) | Why GNNs stay 2–4 layers | All modules |
+
+*(Links are placeholders until upload — regenerate the videos locally anytime with
+`uv run python animations/render_all.py --quality h`.)*
 
 ---
 

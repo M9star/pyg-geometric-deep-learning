@@ -2,6 +2,9 @@
 
 > **Goal:** given a citation network where most papers are unlabeled, predict the topic of every paper.
 
+🎬 **Watch first:** [The GCN formula, term by term](https://youtu.be/REPLACE_ME_2) ·
+[GAT — which neighbors matter](https://youtu.be/REPLACE_ME_3)
+
 ## The dataset: Cora
 - **2,708 nodes** = scientific papers
 - **edges** = citations between papers

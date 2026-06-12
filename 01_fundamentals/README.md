@@ -2,6 +2,9 @@
 
 > **Goal:** understand how a graph is stored in PyG, and *the* core operation of every GNN: message passing.
 
+🎬 **Watch first:** [Message Passing — how every GNN works](https://youtu.be/REPLACE_ME_1) ·
+also relevant: [Over-smoothing — why deep GNNs fail](https://youtu.be/REPLACE_ME_6)
+
 ## 1. What is a graph, in code?
 
 A graph is **nodes** (vertices) connected by **edges**. In deep learning we attach:

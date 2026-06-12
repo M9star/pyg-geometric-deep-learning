@@ -60,8 +60,10 @@ def build_01():
     cells = [
         md(r"""# 01 · Fundamentals — Graphs & Message Passing
 
-> **Run me top to bottom.** Each cell builds on the last. 🎬 There's a narrated animation of this exact idea in
-> `animations/message_passing.py` — render it with `uv run manim -ql animations/message_passing.py MessagePassing`.
+> **Run me top to bottom.** Each cell builds on the last.
+> 🎬 **Watch first:** [Message Passing — how every GNN works](https://youtu.be/REPLACE_ME_1) ·
+> bonus: [Over-smoothing — why deep GNNs fail](https://youtu.be/REPLACE_ME_6)
+> *(animation source: `animations/message_passing.py`)*
 
 ## What is a graph, in code?
 A graph is **nodes** connected by **edges**. For learning we attach:
@@ -157,6 +159,9 @@ def build_02():
     cells = [
         md(r"""# 02 · Node Classification — GCN on Cora
 
+> 🎬 **Watch first:** [The GCN formula, term by term](https://youtu.be/REPLACE_ME_2) ·
+> [GAT — which neighbors matter](https://youtu.be/REPLACE_ME_3)
+
 **Task:** given a citation graph where only ~140 of 2,708 papers are labelled, predict every paper's topic.
 This is **transductive** learning — the whole graph (features + edges) is visible; only test *labels* are hidden.
 
@@ -247,6 +252,9 @@ def build_03():
     cells = [
         md(r"""# 03 · Graph Classification — GIN on MUTAG
 
+> 🎬 **Watch first:** [Batching graphs in PyG](https://youtu.be/REPLACE_ME_4) ·
+> [Why sum beats mean — GIN & the WL test](https://youtu.be/REPLACE_ME_5)
+
 **Task:** classify *whole graphs*. Each graph is a molecule; predict whether it's mutagenic. Two new ideas vs.
 node classification:
 
@@ -331,6 +339,9 @@ print("final test acc:", round(test(test_loader), 3))"""),
 def build_04():
     cells = [
         md(r"""# 04 · Link Prediction — Graph Autoencoder (GAE)
+
+> 🎬 The full animated series (message passing → over-smoothing) is linked in
+> [VIDEOS.md](../VIDEOS.md) — worth a watch before this final module.
 
 **Task:** predict *missing* edges ("who should connect to whom?"). This is **self-supervised** — labels come from
 the graph itself. Hide some real edges, train on the rest, then score all node pairs.
