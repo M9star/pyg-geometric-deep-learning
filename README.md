@@ -35,6 +35,7 @@ Work through the modules **in order**. Each builds on the previous one.
 **Two ways to learn each topic:**
 - 📓 **[`notebooks/`](./notebooks)** — run it stepwise in Jupyter, with rendered math, notes, and inline references.
 - 🎬 **[`animations/`](./animations)** — narrated Manim videos of the trickiest ideas (start with *message passing*).
+  See **[`VIDEOS.md`](./VIDEOS.md)** for what each video covers (also YouTube-ready titles/descriptions).
 - 📚 **[`REFERENCES.md`](./REFERENCES.md)** — exact paper for every method (GCN, GAT, GraphSAGE, GIN, GAE …).
 
 ---

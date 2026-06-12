@@ -67,10 +67,15 @@ class GATAttention(VoiceoverScene):
             self.play(*[e.animate.set_stroke(width=w, color=c)
                         for e, w, c in zip(edges, widths, colors)], run_time=2)
 
+            # place each label at its edge midpoint, nudged into empty space so
+            # the three labels never overlap each other, a node, or an edge
+            offsets = [np.array([0.3, -0.65, 0]),    # left edge: below the line
+                       np.array([-1.0, 0.0, 0]),     # middle vertical edge: to the left
+                       np.array([-0.3, -0.65, 0])]   # right edge: below the line
             alpha_labels = VGroup(*[
                 MathTex(rf"\alpha = {a:.2f}", font_size=30, color=c).move_to(
-                    0.55 * e.get_center() + 0.45 * p + np.array([0.0, 0.35, 0]))
-                for e, p, a, c in zip(edges, neighbor_pos, alphas, colors)
+                    e.get_center() + off)
+                for e, a, c, off in zip(edges, alphas, colors, offsets)
             ])
             self.play(Write(alpha_labels))
 
