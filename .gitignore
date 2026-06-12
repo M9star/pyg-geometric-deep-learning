@@ -12,6 +12,11 @@ data/
 */data/
 *.pt
 
+# Manim render output (videos are large). The one sample lives in assets/.
+media/
+
+# Jupyter notebook execution artifacts handled below
+
 # OS / editor
 .DS_Store
 .idea/

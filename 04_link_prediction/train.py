@@ -10,12 +10,16 @@ the missing links. Self-supervised — no node labels used for training.
 import os
 import sys
 
+# Let unsupported ops fall back to CPU on Apple MPS. Must be set before torch import.
+os.environ.setdefault("PYTORCH_ENABLE_MPS_FALLBACK", "1")
+
 import torch
 import torch_geometric.transforms as T
 from torch_geometric.datasets import Planetoid
 from torch_geometric.nn import GAE, GCNConv
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from utils.device import get_device  # noqa: E402
 from utils.visualization import plot_embeddings_tsne, plot_training_curves  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -35,7 +39,8 @@ class GCNEncoder(torch.nn.Module):
 
 
 def main():
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = get_device()
+    print(f"Using device: {device.type.upper()}")
     torch.manual_seed(42)
 
     # RandomLinkSplit carves the edges into train/val/test sets and creates

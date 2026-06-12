@@ -1,0 +1,33 @@
+[project]
+name = "pyg-geometric-deep-learning"
+version = "0.1.0"
+description = "A hands-on learning path for Graph Machine Learning with PyTorch Geometric — theory, runnable code, notebooks, and narrated Manim animations."
+readme = "README.md"
+license = { text = "MIT" }
+# Pinned to Python 3.12 — the most compatible version for torch + PyG + manim.
+# (3.13/3.14 often lack wheels for the geometric / animation stack.)
+requires-python = ">=3.12,<3.13"
+
+dependencies = [
+    # --- core deep learning ---
+    "torch>=2.2",
+    "torch-geometric>=2.5",
+    # --- science / plotting ---
+    "numpy",
+    "scipy",
+    "scikit-learn",   # t-SNE embedding visualizations
+    "matplotlib",
+    "networkx",       # drawing graphs in the fundamentals module
+    # --- notebooks ---
+    "jupyter",
+    "ipykernel",
+    # --- animations (narrated) ---
+    "manim>=0.18",
+    "manim-voiceover[gtts]>=0.3.7",  # gTTS narration backend (free, needs internet)
+    "gtts",
+]
+
+[tool.uv]
+# This is a learning app, not an installable library — don't try to build it,
+# just manage the dependency environment.
+package = false

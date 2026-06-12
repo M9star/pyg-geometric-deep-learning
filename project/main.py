@@ -14,7 +14,19 @@ import argparse
 import json
 import os
 
+# Let unsupported ops fall back to CPU on Apple MPS. Must be set before torch import.
+os.environ.setdefault("PYTORCH_ENABLE_MPS_FALLBACK", "1")
+
 import torch
+
+
+def pick_device() -> torch.device:
+    """Best available backend: CUDA > MPS (Apple) > CPU."""
+    if torch.cuda.is_available():
+        return torch.device("cuda")
+    if torch.backends.mps.is_available():
+        return torch.device("mps")
+    return torch.device("cpu")
 
 from src.data import load_dataset, make_loaders
 from src.engine import (collect_embeddings, collect_predictions, evaluate,
@@ -27,7 +39,7 @@ RUNS = os.path.join(HERE, "runs")
 
 
 def cmd_train(args):
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = pick_device()
     torch.manual_seed(args.seed)
 
     dataset = load_dataset(args.dataset)
@@ -100,7 +112,7 @@ def cmd_train(args):
 
 
 def cmd_evaluate(args):
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = pick_device()
     ckpt = torch.load(os.path.join(args.run, "model.pt"), map_location=device,
                       weights_only=False)
     cfg = ckpt["config"]

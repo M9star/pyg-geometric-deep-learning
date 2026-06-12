@@ -24,6 +24,7 @@ def main() -> None:
         import torch
         print(f"torch       : {torch.__version__}")
         print(f"CUDA avail  : {torch.cuda.is_available()}")
+        print(f"Apple MPS   : {torch.backends.mps.is_available()}")
     except ImportError:
         sys.exit("[X] PyTorch not installed.  ->  pip install torch")
 

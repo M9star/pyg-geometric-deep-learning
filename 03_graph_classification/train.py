@@ -13,6 +13,9 @@ Demonstrates the two new ideas vs. node classification:
 import os
 import sys
 
+# Let unsupported ops fall back to CPU on Apple MPS. Must be set before torch import.
+os.environ.setdefault("PYTORCH_ENABLE_MPS_FALLBACK", "1")
+
 import torch
 import torch.nn.functional as F
 from torch.nn import BatchNorm1d, Linear, ReLU, Sequential
@@ -21,6 +24,7 @@ from torch_geometric.loader import DataLoader
 from torch_geometric.nn import GINConv, global_add_pool
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from utils.device import get_device  # noqa: E402
 from utils.visualization import plot_embeddings_tsne, plot_training_curves  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -67,7 +71,8 @@ def evaluate(model, loader, device):
 
 
 def main():
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = get_device()
+    print(f"Using device: {device.type.upper()}")
     torch.manual_seed(42)
 
     dataset = TUDataset(root=os.path.join(HERE, "data"), name="MUTAG").shuffle()
