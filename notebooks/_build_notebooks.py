@@ -63,7 +63,6 @@ def build_01():
 > **Run me top to bottom.** Each cell builds on the last.
 > 🎬 **Watch first:** [Message Passing — how every GNN works](https://youtu.be/eZ8AdilDccQ) ·
 > bonus: [Over-smoothing — why deep GNNs fail](https://youtu.be/Xd7QVCdCr5I)
-> *(animation source: `animations/message_passing.py`)*
 
 ## What is a graph, in code?
 A graph is **nodes** connected by **edges**. For learning we attach:
@@ -340,8 +339,8 @@ def build_04():
     cells = [
         md(r"""# 04 · Link Prediction — Graph Autoencoder (GAE)
 
-> 🎬 The full animated series (message passing → over-smoothing) is linked in
-> [VIDEOS.md](../VIDEOS.md) — worth a watch before this final module.
+> 🎬 The full animated series (message passing → over-smoothing) is linked in the
+> [main README](../README.md)'s video table — worth a watch before this final module.
 
 **Task:** predict *missing* edges ("who should connect to whom?"). This is **self-supervised** — labels come from
 the graph itself. Hide some real edges, train on the rest, then score all node pairs.

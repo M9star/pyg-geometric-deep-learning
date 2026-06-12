@@ -16,8 +16,3 @@ networkx                      # graph drawing in the fundamentals module
 # Notebooks
 jupyter
 ipykernel
-
-# Narrated animations
-manim>=0.18                   # also needs system ffmpeg + a LaTeX install
-manim-voiceover[gtts]>=0.3.7  # gTTS narration backend (free, needs internet)
-gtts

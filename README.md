@@ -34,8 +34,7 @@ Work through the modules **in order**. Each builds on the previous one.
 
 **Two ways to learn each topic:**
 - 📓 **[`notebooks/`](./notebooks)** — run it stepwise in Jupyter, with rendered math, notes, and inline references.
-- 🎬 **[`animations/`](./animations)** — narrated Manim videos of the trickiest ideas (start with *message passing*).
-  See **[`VIDEOS.md`](./VIDEOS.md)** for what each video covers.
+- 🎬 **The video series below** — narrated animations of the trickiest ideas (start with *message passing*).
 - 📚 **[`REFERENCES.md`](./REFERENCES.md)** — exact paper for every method (GCN, GAT, GraphSAGE, GIN, GAE …).
 
 ### 🎥 Watch the video series
@@ -49,7 +48,6 @@ Work through the modules **in order**. Each builds on the previous one.
 | 5 | [Why sum beats mean (GIN & WL)](https://youtu.be/sJ-m8AIJC-s) | Expressiveness, Weisfeiler–Lehman | Module 03 |
 | 6 | [Over-smoothing — why deep GNNs fail](https://youtu.be/Xd7QVCdCr5I) | Why GNNs stay 2–4 layers | All modules |
 
-*(Prefer local files? Regenerate the videos anytime with `uv run python animations/render_all.py --quality h`.)*
 
 ---
 
@@ -116,7 +114,8 @@ Every script and notebook calls [`utils/device.py`](./utils/device.py), which au
 **CUDA → MPS (Apple Metal) → CPU**. On Apple Silicon it uses the GPU via MPS, with an automatic CPU fallback for the
 few graph ops Metal doesn't support yet (`PYTORCH_ENABLE_MPS_FALLBACK=1` is set for you).
 
-Each script saves its plots into [`assets/`](./assets) so you have a visual record of every experiment.
+Each script saves its plots into a local `assets/` folder (created on first run) so you have a visual record of
+every experiment.
 
 ---
 
@@ -145,11 +144,12 @@ pyg-geometric-deep-learning/
 ├── 03_graph_classification/   ← GIN on MUTAG molecules
 ├── 04_link_prediction/        ← Graph Autoencoder
 ├── notebooks/                 ← 📓 stepwise Jupyter notebooks (math + notes)
-├── animations/                ← 🎬 narrated Manim explainers (gTTS voiceover)
 ├── utils/                     ← device detection + visualization helpers
-├── project/                   ← capstone CLI project
-└── assets/                    ← generated plots + the sample animation
+└── project/                   ← capstone CLI project
 ```
+
+*(Plots are written to a local `assets/` folder at runtime; the 🎬 video series lives on YouTube — see the table
+above.)*
 
 ## License
 

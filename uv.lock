@@ -1760,11 +1760,8 @@ name = "pyg-geometric-deep-learning"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "gtts" },
     { name = "ipykernel" },
     { name = "jupyter" },
-    { name = "manim" },
-    { name = "manim-voiceover", extra = ["gtts"] },
     { name = "matplotlib" },
     { name = "networkx" },
     { name = "numpy" },
@@ -1774,21 +1771,31 @@ dependencies = [
     { name = "torch-geometric" },
 ]
 
+[package.optional-dependencies]
+anim = [
+    { name = "gtts" },
+    { name = "manim" },
+    { name = "manim-voiceover", extra = ["gtts"] },
+    { name = "pillow" },
+]
+
 [package.metadata]
 requires-dist = [
-    { name = "gtts" },
+    { name = "gtts", marker = "extra == 'anim'" },
     { name = "ipykernel" },
     { name = "jupyter" },
-    { name = "manim", specifier = ">=0.18" },
-    { name = "manim-voiceover", extras = ["gtts"], specifier = ">=0.3.7" },
+    { name = "manim", marker = "extra == 'anim'", specifier = ">=0.18" },
+    { name = "manim-voiceover", extras = ["gtts"], marker = "extra == 'anim'", specifier = ">=0.3.7" },
     { name = "matplotlib" },
     { name = "networkx" },
     { name = "numpy" },
+    { name = "pillow", marker = "extra == 'anim'" },
     { name = "scikit-learn" },
     { name = "scipy" },
     { name = "torch", specifier = ">=2.2" },
     { name = "torch-geometric", specifier = ">=2.5" },
 ]
+provides-extras = ["anim"]
 
 [[package]]
 name = "pyglet"

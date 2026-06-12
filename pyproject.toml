@@ -21,10 +21,16 @@ dependencies = [
     # --- notebooks ---
     "jupyter",
     "ipykernel",
-    # --- animations (narrated) ---
+]
+
+[project.optional-dependencies]
+# Only needed to (re)render the narrated video series locally (the videos
+# themselves live on YouTube — see the README). Install with: uv sync --extra anim
+anim = [
     "manim>=0.18",
     "manim-voiceover[gtts]>=0.3.7",  # gTTS narration backend (free, needs internet)
     "gtts",
+    "pillow",                         # thumbnail generator
 ]
 
 [tool.uv]

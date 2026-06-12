@@ -27,4 +27,5 @@ uv run python notebooks/_build_notebooks.py
 (You can also just edit the `.ipynb` directly in Jupyter — both work.)
 
 ## Want the animated explainer?
-The message-passing idea in notebook 01 has a narrated video version — see [`../animations`](../animations).
+The trickiest ideas have narrated video versions on YouTube — see the **🎥 Watch the video series** table in the
+[main README](../README.md). The message-passing one pairs with notebook 01.

@@ -15,13 +15,14 @@ data/
 # Manim render output (videos are large).
 media/
 
-# YouTube upload package: rendered videos, thumbnails, per-video descriptions.
-# These live locally / on YouTube, not in git — the repo links to the videos
-# instead (see VIDEOS.md). Regenerate with:
-#   uv run python animations/render_all.py --quality h
-#   uv run python animations/make_thumbnails.py
+# Video production material lives locally / on YouTube, not in git — the repo
+# links to the published videos instead (see the README's video table).
+# This covers the Manim animation sources, the upload package (thumbnails +
+# descriptions), the video guide, and all runtime-generated plots.
 youtube/
-assets/*.mp4
+animations/
+assets/
+VIDEOS.md
 
 # Jupyter notebook execution artifacts handled below
 
