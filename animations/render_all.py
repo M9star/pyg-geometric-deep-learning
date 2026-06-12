@@ -20,6 +20,9 @@ SCENES = [
     ("message_passing.py", "MessagePassing"),
     ("gcn_explained.py", "GCNExplained"),
     ("gat_attention.py", "GATAttention"),
+    ("graph_batching.py", "GraphBatching"),
+    ("gin_wl_test.py", "GINWLTest"),
+    ("over_smoothing.py", "OverSmoothing"),
 ]
 
 

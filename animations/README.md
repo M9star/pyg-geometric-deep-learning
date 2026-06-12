@@ -17,6 +17,9 @@ animation stay in sync.
 | `message_passing.py` | `MessagePassing` | The Message → Aggregate → Update loop (the core of every GNN) |
 | `gcn_explained.py` | `GCNExplained` | The GCN formula, term by term, incl. symmetric normalization |
 | `gat_attention.py` | `GATAttention` | GAT: learned attention weights per edge (vs. GCN's fixed degree weights), softmax, multi-head |
+| `graph_batching.py` | `GraphBatching` | Mini-batching graphs: the "one big disconnected graph" trick, the `batch` vector, global pooling |
+| `gin_wl_test.py` | `GINWLTest` | Why GIN uses SUM: a neighbourhood mean can't distinguish but sum can; the Weisfeiler–Lehman bound |
+| `over_smoothing.py` | `OverSmoothing` | Over-smoothing: node embeddings (as colors) collapsing as layers stack — why GNNs stay 2–4 layers deep |
 
 ## Render
 
