@@ -1,0 +1,14 @@
+# Core deep learning
+torch>=2.0
+
+# PyTorch Geometric — graph neural networks
+# For CPU this usually installs cleanly. For GPU / build issues, see:
+# https://pytorch-geometric.readthedocs.io/en/latest/install/installation.html
+torch-geometric>=2.4
+
+# Data, science, plotting
+numpy
+scipy
+scikit-learn          # used for t-SNE embedding visualizations
+matplotlib            # plots
+networkx              # graph drawing for the fundamentals module

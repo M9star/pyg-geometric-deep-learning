@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# PyG / torch downloads & cached datasets
+data/
+*/data/
+*.pt
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Keep the assets folder but ignore nothing inside by default —
+# generated plots ARE committed so learners see expected output.
+# (Remove the line below if you'd rather not commit images.)
+# assets/*.png

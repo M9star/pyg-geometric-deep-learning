@@ -1,0 +1,5 @@
+{
+  "best_val_acc": 1.0,
+  "test_acc_at_best_val": 0.85,
+  "final_test_acc": 0.9
+}
